@@ -1,6 +1,7 @@
 body {
-  background: url("https://files.catbox.moe/cx66yf.png");
+  background: url("https://files.catbox.moe/cx66yf.png") fixed;
   background-repeat: no-repeat;
+  background-size: cover;
   background-color: #000;
 }
 
