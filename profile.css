@@ -1,8 +1,28 @@
+body {
+  background: url("https://files.catbox.moe/cx66yf.png") fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
+}
+
+#main p {
+  background-color: #000;
+  padding: 10px;
+  border: 2px solid #000001;
+  box-shadow: 5px 5px #000;
+  color: #fff;
+}
+
+#main a {
+  color: #fff;
+}
+
 #profile-top-right .left h1 {
   background: linear-gradient(90deg, #add8e6, pink, #fff, pink, #add8e6);
   -webkit-background-clip: text;
   background-clip: text;
   color: #0000;
+  width: max-content;
 }
 
 #profile-top-right .left p {
@@ -17,7 +37,22 @@
   background: linear-gradient(90deg, red, red, #ff8000, #ff0, #80ff00, #0f0, #00ff80, #0ff, #0080ff, #00f, #7f00ff, #f0f, #ff007f, #ff007f, #f0f, #7f00ff, #00f, #0080ff, #0ff, #00ff80, #0f0, #80ff00, #ff0, #ff8000, red, red, #ff8000);
   background-size: 1200% 100%;
   animation: 20s linear infinite rainbowShift;
-  color: #fff;
+}
+
+body:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  background-image: url("https://wallpapercave.com/wp/wp5133248.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  animation: 2.5s forwards fadeOut;
 }
 
 @keyframes rainbowShift {
@@ -32,22 +67,6 @@
 
 #profile-top-left > img {
   animation: .5s infinite forwards wobble;
-}
-
-body:after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  background-image: url("https://media1.tenor.com/m/kVia16tzOLAAAAAd/hatsune-miku-miku-hatsune.gif");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 9999;
-  animation: 2.5s forwards fadeOut;
 }
 
 @keyframes fadeOut {
@@ -113,5 +132,11 @@ body:after {
 
   100% {
     background-position: 100%;
+  }
+}
+
+:root:has(#header-avatar[src*="https://avatar.cdn.sillypost.net/334d2962-7ce3-40e7-b40f-027f710a342c.png"]) {
+  & #profile-relationship-status:after {
+    content: " (hi jade :3)";
   }
 }
